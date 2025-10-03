@@ -1,0 +1,247 @@
+﻿* {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d32f2f;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #b71c1c;
+    padding: 20px;
+    border-bottom: 5px solid #ffc107;
+    color: #ffeb3b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+}
+
+.header-image {
+    width: 100px;
+    margin-right: 20px;
+    border: 3px solid #ffc107;
+    border-radius: 10%;
+}
+
+.header-text h1 {
+    font-size: 48px;
+}
+
+.header-text h2 {
+    font-size: 24px;
+}
+
+header .name-group-variant {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.layout-table {
+    margin: 0 ;
+}
+
+.layout-table td {
+    padding: 10px;
+    vertical-align: top;
+    border: none;
+}
+
+.inputs {
+    background-color: #ef5350;
+    padding: 20px;
+    border: 3px solid #ffc107;
+    border-radius: 10px;
+    width: 400px;
+    text-align: left;
+}
+
+.inputs h5 {
+    font-size: 20px;
+    color: #ffeb3b;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.inputs .x-input,
+.inputs .y-input,
+.inputs .r-input {
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+    background-color: #d32f2f;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+}
+
+.r-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button.r-button {
+    padding: 10px 15px;
+    background-color: #b71c1c;
+    color: #ffffff;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+button.r-button:hover, button.r-button.active {
+    background-color: #ffeb3b;
+    color: #212121;
+    transform: scale(1.1);
+}
+
+#submitButton {
+    width: 100%;
+    padding: 15px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+#submitButton:hover {
+    background-color: #66bb6a;
+}
+
+.res-table-wrapper {
+    margin: 30px ;
+    width: 80%;
+    max-height: 300px;
+    overflow-x: hidden;
+    border: 3px solid #ffc107;
+    border-radius: 5px;
+    background-color: #ef5350;
+}
+
+.res-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ef5350;
+}
+
+.res-table-wrapper::-webkit-scrollbar {
+    width: 12px;
+}
+
+.res-table-wrapper::-webkit-scrollbar-track {
+    background: #b71c1c;
+    border-radius: 5px;
+}
+
+.res-table-wrapper::-webkit-scrollbar-thumb {
+    background: #ffeb3b;
+    border-radius: 5px;
+}
+
+.res-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #ffc107;
+}
+
+th, td {
+    border: 2px solid #ffc107;
+    padding: 12px;
+    text-align: center;
+}
+
+.res-table th:nth-child(1),
+.res-table td:nth-child(1),
+.res-table th:nth-child(2),
+.res-table td:nth-child(2),
+.res-table th:nth-child(3),
+.res-table td:nth-child(3) {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #b71c1c;
+    color: #ffeb3b;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d32f2f;
+}
+
+tbody tr {
+    background-color: #b71c1c;
+    color: #ffeb3b;
+}
+
+#graph {
+    background-color: #ef5350;
+    border: 3px solid #ffc107;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.chart .graph-figures {
+    fill: #ffeb3b;
+    stroke: #212121;
+    stroke-width: 2;
+    opacity: 0.7;
+}
+
+.chart text {
+    fill: #ffffff;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.chart line {
+    stroke: #ffffff;
+}
+
+.r-input h5 {
+    width: 100%;
+}

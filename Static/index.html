@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Социальный рейтинг</title>
+    <link rel="stylesheet" href="style/MainCSS.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/plusrep.png" alt="Партия гордится тобой" class="header-image">
+        <div class="header-text">
+            <h1>ПАРТИЯ ГОРДИТСЯ ТОБОЙ!</h1>
+            <h2>ПЛЮС МИСКА РИСА!</h2>
+        </div>
+        <div class="name-group-variant">
+            <p>Svechnikov Fedor
+            P3206
+            <p>
+            <p>Вариант 467393<p>
+        </div>
+    </header>
+
+    <main>
+        <table class="layout-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="graph">
+                            <div class="chart">
+                                <svg width="400" height="400">
+                                    <polygon class="graph-figures" points="200,200 280,200 200,40"></polygon>
+                                    <rect class="graph-figures" x="40" y="200" width="160" height="80"/>
+                                    <defs><clipPath id="clip"><rect x="200" y="200" width="160" height="160"/></clipPath></defs>
+                                    <circle class="graph-figures" cx="200" cy="200" r="160" clip-path="url(#clip)" transform="rotate(180 200 200)"/>
+
+                                    <line x1="195" x2="205" y1="120" y2="120" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="206" y="122">R/2</text>
+                                    <line x1="195" x2="205" y1="40" y2="40" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="206" y="42">R</text>
+
+                                    <line x1="195" x2="205" y1="280" y2="280" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="206" y="282">-R/2</text>
+                                    <line x1="195" x2="205" y1="360" y2="360" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="206" y="362">-R</text>
+
+                                    <text x="205" y="10">y</text>
+                                    <line x1="200" x2="200" y1="400" y2="0" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <line x1="200" x2="195" y1="0" y2="5" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <line x1="200" x2="205" y1="0" y2="5" stroke="white" fill="transparent" stroke-width="2"/>
+
+                                    <line x1="280" x2="280" y1="195" y2="205" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="276" y="193">R/2</text>
+                                    <line x1="360" x2="360" y1="195" y2="205" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="356" y="193">R</text>
+
+                                    <line x1="120" x2="120" y1="195" y2="205" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="116" y="193">-R/2</text>
+                                    <line x1="40" x2="40" y1="195" y2="205" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <text x="36" y="193">-R</text>
+
+                                    <text x="390" y="215">x</text>
+                                    <line x1="0" x2="400" y1="200" y2="200" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <line x1="400" x2="395" y1="200" y2="195" stroke="white" fill="transparent" stroke-width="2"/>
+                                    <line x1="400" x2="395" y1="200" y2="205" stroke="white" fill="transparent" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inputs">
+                            <form id="coords-form" method="get">
+                                <div class="x-input">
+                                    <h5>Координата X</h5>
+                                    <input id="x-input" type="text" placeholder="от -5 до 5"/>
+                                </div>
+
+                                <div class="y-input">
+                                    <h5>Координата Y</h5>
+                                    <input id="y-input" type="text" placeholder="от -3 до 3"/>
+                                </div>
+
+                                <div class="r-input">
+                                    <h5>Оценка партии (R)</h5>
+                                    <button class="r-button" type="button" data-value="1">1</button>
+                                    <button class="r-button" type="button" data-value="2">2</button>
+                                    <button class="r-button" type="button" data-value="3">3</button>
+                                    <button class="r-button" type="button" data-value="4">4</button>
+                                    <button class="r-button" type="button" data-value="5">5</button>
+                                </div>
+
+                                <button id="submitButton" type="submit">Доложить Партии</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="res-table">
+            <thead id="table-head">
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Партия довольна?</th>
+                    <th>Время доклада</th>
+                    <th>Казнь/похвала через</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
