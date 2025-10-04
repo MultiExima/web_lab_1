@@ -160,22 +160,16 @@ button.r-button:hover, button.r-button.active {
     background-color: #ef5350;
 }
 
-.res-table-wrapper::-webkit-scrollbar {
-    width: 12px;
-}
+.res-table::-webkit-scrollbar {
+	width: 6px;
+} 
 
-.res-table-wrapper::-webkit-scrollbar-track {
-    background: #b71c1c;
-    border-radius: 5px;
+.res-table::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
-
-.res-table-wrapper::-webkit-scrollbar-thumb {
-    background: #ffeb3b;
-    border-radius: 5px;
-}
-
-.res-table-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #ffc107;
+ 
+.res-table::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
 
 th, td {
