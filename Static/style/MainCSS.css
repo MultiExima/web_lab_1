@@ -16,6 +16,18 @@ body {
     flex-direction: column;
 }
 
+body::-webkit-scrollbar {
+	width: 6px;
+} 
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+ 
+body::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
 header {
     background-color: #b71c1c;
     padding: 20px;
