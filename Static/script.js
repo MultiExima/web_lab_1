@@ -3,28 +3,28 @@
     function validateNumber(inputValue, min, max) {
         const trimmed = (inputValue || "").trim().replace(",", ".");
         if (trimmed.length === 0) {
-            return { valid: false, value: null, error: "Пустое значение" };
+            return { valid: false, value: null, stringValue: null, error: "Пустое значение" };
         }
 
         const numberPattern = /^-?\d*(?:\.\d+)?$/;
         if (!numberPattern.test(trimmed)) {
-            return { valid: false, value: null, error: "Только числа, точка как разделитель" };
+            return { valid: false, value: null, stringValue: null, error: "Только числа, точка как разделитель" };
         }
 
         if (trimmed === "-" || trimmed === "." || trimmed === "-.") {
-            return { valid: false, value: null, error: "Неполное число" };
+            return { valid: false, value: null, stringValue: null, error: "Неполное число" };
         }
 
         const numeric = Number(trimmed);
         if (Number.isNaN(numeric)) {
-            return { valid: false, value: null, error: "Не число" };
+            return { valid: false, value: null, stringValue: null, error: "Не число" };
         }
 
         if (numeric < min || numeric > max) {
-            return { valid: false, value: null, error: `Диапазон от ${min} до ${max}` };
+            return { valid: false, value: null, stringValue: null, error: `Диапазон от ${min} до ${max}` };
         }
 
-        return { valid: true, value: numeric, error: null };
+        return { valid: true, value: numeric, stringValue: trimmed, error: null };
     }
 
     const form = document.getElementById("coords-form");
@@ -163,7 +163,7 @@
             return;
         }
 
-        const params = new URLSearchParams({ x: String(xv.value), y: String(yv.value), r: String(selectedR) });
+        const params = new URLSearchParams({ x: xv.stringValue, y: yv.stringValue, r: String(selectedR) });
         
         const scriptStartTime = performance.now();
         
