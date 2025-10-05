@@ -53,9 +53,9 @@ public class FastCGIServer {
                 String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 
                 String json = "{" +
-                        "\"x\":" + x + "," +
-                        "\"y\":" + y + "," +
-                        "\"r\":" + r + "," +
+                        "\"x\":\"" + escapeJson(x.toPlainString()) + "\"," +
+                        "\"y\":\"" + escapeJson(y.toPlainString()) + "\"," +
+                        "\"r\":\"" + escapeJson(r.toPlainString()) + "\"," +
                         "\"hit\":" + hit + "," +
                         "\"time\":\"" + escapeJson(time) + "\"}";
 
@@ -135,6 +135,7 @@ public class FastCGIServer {
         }
     }
 }
+
 
 
 
